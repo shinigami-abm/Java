@@ -1,20 +1,20 @@
  public class acc{
    private  float id;
-   private  long long float sold;
+   private  double sold;
    private  boolean autorise;
-   private  long long float maxdv= 100000;
-:
-   public acc(float id, long long float sold){
+   private  double maxdv= 100000;
+
+   public acc(float id, double sold){
 	   this.id= id ;
 	   this.sold = sold;
 	   this.autorise = true;
 
    }
-   public class void deposit(long long float plus){
+   public void deposit(double plus){
 
        this.sold+=plus;
    }
-   public class void take(long long float amount){
+   public void take(double amount){
     if(this.sold > amount && this.autorise == true){
 	   this.sold= this.sold - amount;
     }
@@ -29,11 +29,11 @@
 	      }
     
    }
-   public class void print(){
-	   printf(" Account id=%d\n"this.id);
+   public void print(){
+	   printf(" Account id=%d\n",this.id);
 	   printf("The amount is sold=%f\n",this.sold);
    }
-   public class void change(acc A, long long float amount){ 
+   public void change(acc A, double amount){ 
 	   if(A.sold > amount){
 	        A.sold=A.sold-amount;
                  this.sold=this.sold+ amount;
@@ -42,11 +42,11 @@
                   printf("the  account the you want to take has less than you want\n");
 	   }
    }
+ 
+
+
  }
-
-
-
-  public static void main( string [] args){
+  public static void main(String[] args){
 
 	  acc a= new acc(001, 4000);
 	  a.daposit(1000);
@@ -56,4 +56,6 @@
 	  acc b= new acc(002, 5000);
 	  a.change(b, 1000);
 	  a.print();
-  } 
+	  b.print();
+  }
+  
